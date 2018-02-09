@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf8'>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+<title>Тест на javascript</title>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?151"></script>
+</head>
+<body>
+<div id="header">
+  <div class='nav'>
+    <ul>
+      <li><a href='main.html'>Главная</a></li>
+      <li><a href='testMobile.html'>Тест</a>
+      <ul>
+        <li><a href='testMobile.html'>Пройти тест</a></li>
+        <li><a href='404.html'>Подготовка</a></li>
+        </ul>
+      </li>
+      <li><a href='#'>Пусто</a>
+          <ul>
+        <li><a href='#'>Пусто</a></li>
+        <li><a href='#'>Пусто</a></li>
+        <li><a href='#'>Пусто</a></li>
+        <li><a href='#'>Пусто</a></li>
+        </ul>
+      </li>
+      <li><a href='main.html'><h2>Математическо-логический тест для 6-7 классов</h2></a></li>
+    </ul>
+  </div>
+</div>
+  <div id="sidebar">
+    <p>
+    <div style="margin: 1%">
+      <div id="vk_groups" ></div>
+    </div>
+        <script type="text/javascript">
+          VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, height: "400", color1: '303030', color2: 'FC0', color3: 'FC0'}, 158672082);
+        </script>
+    </p>
+    <p>
+        <div id="vk_subscribe"></div>
+        	<script type="text/javascript">
+          	VK.Widgets.Subscribe("vk_subscribe", {}, 403394361);
+        	</script>
+    </p>
+  </div>
+  <div id="content">
+  	<img class="img" src="м.jpg" height="100%" width="60%">
+
+
+		</div>
+	
+	</div>	
+	
+	<br><center>
+		<button id="start" class="btn btn-primary btn-lg" onclick="check(5)">Приступить к тесту</button>
+		<div id ="result">
+
+		</div>
+
+		<script type="text/javascript"> var curent_url = document.URL; document.write("<a id='end' style='display: none;' class='myButton' href='" + curent_url + "'>Начать сначала</a>"); </script>	
+	</center>
+  </div>
+</div>
+  <div id="footer">
+
+      <style type="text/css">
+
+	.wrapper{
+		width: 600px;
+		height: 130px;
+		margin: 0 auto;
+		display: none;
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+	}
+
+</style>
+
+<script type="text/javascript" class="test">
+
+	var countQuest = 0;
+	var plus = 0;
+	var test_start = 0;
+	
+	function check(num){
+	
+		if(num == 5){ 
+			
+			document.getElementById('area').style.display='block'; //
+			document.getElementById('start').style.display='none';
+			document.getElementById('end').style.display='inline';
+
+			if(test_start == 0){
+			
+			//Массив вопросов
+				var questions = ["Какие делители числа 68",
+								"Выберите кратные числа 7",
+								"Какие числа из перечисленных четные?",
+								"Расстояние между пунктами А и В автомобиль проехал за 1 часа, а автобус за 2 часа. Найдите скорость автомобиля, если автобус двигался со скоростью 20 км/ч.",
+								 "Вдоль дороги через каждые 45 м стоят столбы. Их решили заменить другими, увеличив расстояние между столбами до 60 м. На каком расстояние от первого столба новый столб установят на то же место, где стоял старый?"];
+			
+				//Массивы вариантов ответов
+			var number1 = ["1, 7, 8, 32, 16",  "10, 9, 76, 8...",      "8, 9",      "50 км/ч", "180 м"];	
+			var number2 = ["1, 2, 68, 34, 17", "266, 1000, 7, 20...",  "7, 4",      "45 км/ч", "200 м"];	
+			var number3 = ["7, 9, 46, 7",      "1, 7, 9, 96784...",    "2, 4, 22",  "55 км/ч", "150 м"];	
+			var number4 = ["68, 5.",           "7, 14, 63, 77, 35...", "13, 6",     "40 км/ч", "145 м"];	
+			var number5 = ["61",               "7, 84, 54, 77, 48...", "5, 2, 53",  "60 км/ч", "185 м"];
+			
+			
+				//Массив правильных ответов
+			var answer = [1,3,2,3,0];
+
+				document.getElementById('question').innerHTML=questions[countQuest];
+		
+				document.getElementById('option1').innerHTML=number1[countQuest];
+				document.getElementById('option2').innerHTML=number2[countQuest];
+				document.getElementById('option3').innerHTML=number3[countQuest];
+				document.getElementById('option4').innerHTML=number4[countQuest];
+				document.getElementById('option5').innerHTML=number5[countQuest];
+				
+					//Массив правильных ответов
+			var answer = [1,3,2,3,0];
+				
+				test_start = 1;	
+			}
+		}
+		else{
+					//Массив вопросов
+				var questions = ["Какие делители числа 68",
+								"Выберите кратные числа 7",
+								"Какие числа из перечисленных четные?",
+								"Расстояние между пунктами А и В автомобиль проехал за 1 часа, а автобус за 2 часа. Найдите скорость автомобиля, если автобус двигался со скоростью 20 км/ч.",
+								 "Вдоль дороги через каждые 45 м стоят столбы. Их решили заменить другими, увеличив расстояние между столбами до 60 м. На каком расстояние от первого столба новый столб установят на то же место, где стоял старый?"];
+			
+				//Массивы вариантов ответов
+			var number1 = ["1, 7, 8, 32, 16",  "10, 9, 76, 8...",      "8, 9",      "50 км/ч", "180 м"];	
+			var number2 = ["1, 2, 68, 34, 17", "266, 1000, 7, 20...",  "7, 4",      "45 км/ч", "200 м"];	
+			var number3 = ["7, 9, 46, 7",      "1, 7, 9, 96784...",    "2, 4, 22",  "55 км/ч", "150 м"];	
+			var number4 = ["68, 5.",           "7, 14, 63, 77, 35...", "13, 6",     "40 км/ч", "145 м"];	
+			var number5 = ["61",               "7, 84, 54, 77, 48...", "5, 2, 53",  "60 км/ч", "185 м"];
+			
+			
+				//Массив правильных ответов
+			var answer = [1,3,2,3,0];
+			
+			if(num == answer[countQuest]) plus++;
+			
+			if(questions.length - 1> countQuest){
+
+				countQuest++;
+				
+				document.getElementById('question').innerHTML=questions[countQuest];
+			
+				document.getElementById('option1').innerHTML=number1[countQuest];
+				document.getElementById('option2').innerHTML=number2[countQuest];
+				document.getElementById('option3').innerHTML=number3[countQuest];
+				document.getElementById('option4').innerHTML=number4[countQuest];
+				document.getElementById('option5').innerHTML=number5[countQuest];
+
+			}
+			else{ 
+			
+				document.getElementById('area').style.display='none';
+				alert('У Вас ' + plus + ' правильных ответа!');
+			if (plus == 5) {
+				document.getElementById('result').innerHTML="<p><a class='btn btn-primary btn-lg'href='result5.html' role='button'>Результат</a></p>"
+			}else
+				if (plus == 4) {
+				document.getElementById('result').innerHTML="<p><a class='btn btn-primary btn-lg'href='result4.html' role='button'>Результат</a></p>"
+			}else
+				if (plus == 3) {
+				document.getElementById('result').innerHTML="<p><a class='btn btn-primary btn-lg'href='result3.html' role='button'>Результат</a></p>"
+			}else{
+				document.getElementById('result').innerHTML="<p><a class='btn btn-primary btn-lg' href='resultneud.html'>Результат</a></p>"
+			}
+			}
+		}
+	}
+	
+</script>
+
+	<div class="container">
+
+		<div id="area" class="container" style="display: none;">
+
+			<center>			
+			
+				<h2 id="question"></h2>
+				
+				<button onclick="check(0)" class="btn btn-primary btn-lg" id="option1"></button>
+				
+				<button onclick="check(1)" class="btn btn-primary btn-lg" id="option2"></button>
+				
+				<button onclick="check(2)" class="btn btn-primary btn-lg" id="option3"></button>
+				
+				<button onclick="check(3)" class="btn btn-primary btn-lg" id="option4"></button>
+
+				<button onclick="check(4)" class="btn btn-primary btn-lg" id="option5"></button>
+			
+			</center></div>
+ </body>
+</body>
+</html>
